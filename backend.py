@@ -262,6 +262,11 @@ def create_customer():
     except Exception as e:
         return jsonify(error=str(e)), 403
 
+@app.route('/example', methods=['POST'])
+@cross_origin()
+def example():
+  return {'name': "Angel"}, 200
+
 @app.route('/sub45', methods=['POST'])
 @cross_origin()
 def sub():
