@@ -267,7 +267,7 @@ def create_customer():
 def example():
   return {'name': "Angel"}, 200
 
-@app.route('/sub45', methods=['POST'])
+@app.route('/sub', methods=['POST'])
 @cross_origin()
 def sub():
     email = request.json.get('email', None)
@@ -497,4 +497,4 @@ def user():
     return user_info, 200
     
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug=True, port=8080)
