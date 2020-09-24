@@ -263,6 +263,7 @@ def create_customer():
         return jsonify(error=str(e)), 403
 
 @app.route('/sub', methods=['POST'])
+@cross_origin()
 def sub():
     email = request.json.get('email', None)
     payment_method = request.json.get('payment_method', None)
